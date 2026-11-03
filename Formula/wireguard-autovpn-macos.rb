@@ -12,17 +12,17 @@ class WireguardAutovpnMacos < Formula
 
   def install
     bin.install "bin/wireguard-auto"
-    (etc/"wireguard").mkpath
-    etc.install "config/autovpn.conf.example" => "wireguard/autovpn.conf"
+    pkgshare.install "config/autovpn.conf.example"
+    pkgshare.install "config/com.wireguard.autovpn.plist"
   end
 
   def caveats
     <<~EOS
-      1. Edit your trusted home Wi-Fi SSIDs and/or Gateway MACs in:
-           #{etc}/wireguard/autovpn.conf
-
-      2. Install and start the root-protected LaunchDaemon:
+      1. Install and start the root-protected LaunchDaemon (also creates/preserves autovpn.conf):
            sudo #{opt_bin}/wireguard-auto install-daemon
+
+      2. Edit your trusted home Wi-Fi SSIDs and/or Gateway MACs in:
+           #{etc}/wireguard/autovpn.conf
 
       3. Verify your network status and Gateway MAC:
            wireguard-auto status
