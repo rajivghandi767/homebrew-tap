@@ -1,8 +1,8 @@
 class WireguardAutovpnMacos < Formula
   desc "Zero-polling, event-driven WireGuard split-tunnel automation for macOS"
   homepage "https://github.com/rajivghandi767/wireguard-autovpn-macos"
-  url "https://github.com/rajivghandi767/wireguard-autovpn-macos/archive/refs/tags/v1.0.0.tar.gz"
-  sha256 "0888063d53ccef41273bd96944cfcef824a9c2f0acae2ff80fa3e011d3e62760"
+  url "https://github.com/rajivghandi767/wireguard-autovpn-macos/archive/refs/tags/v1.1.0.tar.gz"
+  sha256 "2f25daf2606857f2328591b4520fd49de974b6723558c2f18689739b31c0e878"
   license "MIT"
   head "https://github.com/rajivghandi767/wireguard-autovpn-macos.git", branch: "main"
 
